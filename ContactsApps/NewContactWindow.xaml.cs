@@ -9,6 +9,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ContactsApps.Classes;
+using SQLite;
 
 namespace ContactsApps
 {
@@ -24,7 +26,17 @@ namespace ContactsApps
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            //TODO: Save contact to DB
+            Contact contact = new Contact()
+            {
+                contactName = nameTextBox.Text,
+                contactEmail = emailTextBox.Text,
+                contactPhone = phoneTextBox.Text
+            };
+            using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
+            {
+                connection.CreateTable<Contact>();
+                connection.Insert(contact);
+            }
             Close();
         }
     }
