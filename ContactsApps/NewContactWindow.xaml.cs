@@ -24,7 +24,8 @@ namespace ContactsApps
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            //TODO: Save contact to DB
+            Close();
         }
     }
 }

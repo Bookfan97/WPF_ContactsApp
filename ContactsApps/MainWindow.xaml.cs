@@ -24,5 +24,11 @@ namespace ContactsApps
         {
             InitializeComponent();
         }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            NewContactWindow instance = new NewContactWindow();
+            instance.ShowDialog();
+        }
     }
 }
