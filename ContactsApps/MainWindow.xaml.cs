@@ -44,7 +44,7 @@ namespace ContactsApps
             using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
             {
                 connection.CreateTable<Contact>();
-                contacts = connection.Table<Contact>().ToList();
+                contacts = (connection.Table<Contact>().ToList()).OrderBy(contact => contact.contactName).ToList();
             }
 
             if (contacts != null)
