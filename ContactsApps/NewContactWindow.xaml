@@ -8,8 +8,11 @@
         Title="NewContactWindow" Height="450" Width="800">
     <Grid>
         <StackPanel Margin="10">
+            <Label Content="Name"/>
             <TextBox x:Name="nameTextBox" Margin="0,0,0,5"></TextBox>
+            <Label Content="Email"/>
             <TextBox x:Name="emailTextBox" Margin="0,0,0,5"></TextBox>
+            <Label Content="Phone"/>
             <TextBox x:Name="phoneTextBox" Margin="0,0,0,5"></TextBox>
             <Button Content="SAVE" Click="ButtonBase_OnClick"></Button>
         </StackPanel>
