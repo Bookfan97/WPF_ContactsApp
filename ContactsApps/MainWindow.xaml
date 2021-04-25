@@ -20,5 +20,7 @@
         </ListView.ItemTemplate>
         </ListView>
         <Button Content="New Contact" Click="ButtonBase_OnClick"></Button>
+        <Label Content="Search"></Label>
+        <TextBox Margin=" 0,5,0,5" TextChanged="TextBoxBase_OnTextChanged"/>
     </StackPanel>
 </Window>
